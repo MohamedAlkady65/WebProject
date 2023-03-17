@@ -180,7 +180,7 @@ nav .menu{
     }
     nav .list > li{
     padding: 10px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     color: white;
     width: 130px;
     text-align: center;
