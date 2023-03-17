@@ -1,7 +1,12 @@
 :root {
+  --main-color:#232f3e;
+  --second-color:#febd69;
 }
 html {
   scroll-behavior: smooth;
+}
+*{
+  box-sizing: border-box;
 }
 body {
   font-family: "Cairo", sans-serif;
@@ -41,11 +46,11 @@ ul {
 }
 
 nav {
-  background-color: #232f3e;
+  background-color: var(--main-color);
   font-size: 20px;
   position: sticky;
   top: 0;
-  border-bottom:2px solid #febd69 ;
+  border-bottom:2px solid var(--second-color) ;
 }
 
 nav .container {
@@ -58,7 +63,7 @@ nav .container {
 }
 
 nav .logo {
-  color: #febd69;
+  color: var(--second-color);
   font-size: 25px;
   cursor: pointer;
 }
@@ -82,10 +87,10 @@ width: 200px;
 display: none;
 cursor: pointer;
 flex-direction: column;
-background-color: #232f3e;
+background-color: var(--main-color);
 font-size: 16px;
 font-weight: normal;
-top: 56px;
+top: 57px;
 left: 100px;
 border-bottom-left-radius: 10px ;
 border-bottom-right-radius: 10px;
@@ -103,13 +108,26 @@ nav .btns .cat-item {
     color: white;
 }
 nav .btns .cat-item:hover {
-    border-left: 5px solid #febd69;
+    border-left: 5px solid var(--second-color);
+    color: var(--second-color);
 }
 
 nav  .btns > li:hover {
-  background-color: #febd69;
-  color: #232f3e;
-  transition-duration: 0.2s;
+  background-color: var(--second-color);
+  color: var(--main-color);
+}
+nav .shop{
+  position: relative;
+}
+nav .shop::before{
+  font-family: "Font Awesome 5 Free";
+  content: "\f107";
+  font-size: 15px;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translate(0,-50%);
 }
 nav .shop:hover + .cat{
   display: flex;
@@ -126,8 +144,8 @@ nav .login .cart-icon {
 nav .login .cart-icon::after {
   display: inline-block;
   content: "1";
-  background-color: #febd69;
-  color: #232f3e;
+  background-color: var(--second-color);
+  color: var(--main-color);
   font-size: 10px;
   text-align: center;
   border-radius: 50%;
@@ -144,21 +162,21 @@ nav .menu{
 }
 @media (max-width: 767px) {
     nav .btns{
-        position: absolute;
+        position: fixed;
         display: flex;
         flex-direction: column;
         align-items: center;
-        top: 70px;
-        background-color: #232f3e;
+        top: 71px;
+        background-color: var(--main-color);
         width: 100%;
-        left: 1000px;
+        right: -700px;
         transition-duration: 0.5s;
         padding: 0;
         gap: 0;
         z-index: 6;
     }
     nav .btns.active{
-      left: 0;
+      right: 0;
     }
     nav .btns > li{
     padding: 10px;
@@ -214,7 +232,7 @@ nav .menu{
   }
   @media (max-width: 767px) {
     .cart{
-      top: 70px;
+      top: 71px;
     }
     .cart.active{
       right: 0;
