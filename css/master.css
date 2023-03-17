@@ -68,20 +68,20 @@ nav .logo {
   cursor: pointer;
 }
 
-nav  .btns {
+nav  .list {
   display: flex;
   gap: 60px;
   position: relative;
 }
 
-nav .btns > li {
+nav .list > li {
   margin: 0 ;
   cursor: pointer;
   padding: 10px 20px;
   border-radius: 8px;
   transition-duration: 0.2s;
 }
-nav .btns .cat {
+nav .list .cat {
 position: absolute;
 width: 200px;
 display: none;
@@ -96,10 +96,10 @@ border-bottom-left-radius: 10px ;
 border-bottom-right-radius: 10px;
 transition-duration: 0.2s;
 }
-nav .btns .cat.active{
+nav .list .cat.active{
 display: flex;
 }
-nav .btns .cat-item {
+nav .list .cat-item {
     padding: 15px;
     transition-duration: 0.3s;
     width: 100%;
@@ -107,12 +107,12 @@ nav .btns .cat-item {
     display: inline-block;
     color: white;
 }
-nav .btns .cat-item:hover {
+nav .list .cat-item:hover {
     border-left: 5px solid var(--second-color);
     color: var(--second-color);
 }
 
-nav  .btns > li:hover {
+nav  .list > li:hover {
   background-color: var(--second-color);
   color: var(--main-color);
 }
@@ -161,7 +161,7 @@ nav .menu{
     cursor: pointer;
 }
 @media (max-width: 767px) {
-    nav .btns{
+    nav .list{
         position: fixed;
         display: flex;
         flex-direction: column;
@@ -175,10 +175,10 @@ nav .menu{
         gap: 0;
         z-index: 6;
     }
-    nav .btns.active{
+    nav .list.active{
       right: 0;
     }
-    nav .btns > li{
+    nav .list > li{
     padding: 10px;
     margin-bottom: 20px;
     color: white;
@@ -189,7 +189,7 @@ nav .menu{
         display: block;
     }
     nav .shop:hover + .cat,
-    nav .btns .cat.active{
+    nav .list .cat.active{
       display: block;
       position: relative;
       top: -15px;
@@ -198,11 +198,11 @@ nav .menu{
       border-radius: 10px;
       overflow: hidden;
       }
-    nav .btns .cat-item{
+    nav .list .cat-item{
       padding: 15px;
       transition-duration: 0.2s;
   }
-  nav .btns .cat-item:hover {
+  nav .list .cat-item:hover {
       background-color: #1d2632;
   }
 
