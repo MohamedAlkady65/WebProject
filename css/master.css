@@ -1,6 +1,8 @@
 :root {
-  --main-color:#232f3e;
-  --second-color:#febd69;
+  --default-color:#7988FD;
+  --hover-color:#5865d9;
+  --disabled-color:#949494;
+  --input-color:#E8E8E8;
 }
 html {
   scroll-behavior: smooth;
@@ -9,19 +11,7 @@ html {
   box-sizing: border-box;
 }
 body {
-  font-family: "Cairo", sans-serif;
-  position: relative;
-  min-height: 100vh;
-}
-.overlay.active {
-  position: fixed;
-  opacity: 0.7;
-  background-color: black;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 5;
+  font-family: 'Montserrat', sans-serif;
 }
 a {
   text-decoration: none;
@@ -30,6 +20,12 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+input{
+  border: none;
+}
+input:focus{
+  outline: none;
 }
 .container {
   padding-left: 20px;
@@ -45,201 +41,6 @@ ul {
   }
 }
 
-nav {
-  background-color: var(--main-color);
-  font-size: 20px;
-  position: sticky;
-  top: 0;
-  border-bottom:2px solid var(--second-color) ;
-}
 
-nav .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-  color: white;
-  font-weight: bold;
-}
 
-nav .logo {
-  color: var(--second-color);
-  font-size: 25px;
-  cursor: pointer;
-}
 
-nav  .list {
-  display: flex;
-  gap: 60px;
-  position: relative;
-}
-
-nav .list > li {
-  margin: 0 ;
-  cursor: pointer;
-  padding: 10px 20px;
-  border-radius: 8px;
-  transition-duration: 0.2s;
-}
-nav .list .cat {
-position: absolute;
-width: 200px;
-display: none;
-cursor: pointer;
-flex-direction: column;
-background-color: var(--main-color);
-font-size: 16px;
-font-weight: normal;
-top: 57px;
-left: 100px;
-border-bottom-left-radius: 10px ;
-border-bottom-right-radius: 10px;
-transition-duration: 0.2s;
-}
-nav .list .cat.active{
-display: flex;
-}
-nav .list .cat-item {
-    padding: 15px;
-    transition-duration: 0.3s;
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    color: white;
-}
-nav .list .cat-item:hover {
-    border-left: 5px solid var(--second-color);
-    color: var(--second-color);
-}
-
-nav  .list > li:hover {
-  background-color: var(--second-color);
-  color: var(--main-color);
-}
-nav .shop{
-  position: relative;
-}
-nav .shop::before{
-  font-family: "Font Awesome 5 Free";
-  content: "\f107";
-  font-size: 15px;
-  font-weight: 600;
-  position: absolute;
-  top: 50%;
-  right: 5px;
-  transform: translate(0,-50%);
-}
-nav .shop:hover + .cat{
-  display: flex;
-}
-nav .login  {
-    display: flex;
-    gap: 15px;
-}
-nav .login .cart-icon {
-  position: relative;
-  font-size: 25px;
-  cursor: pointer;
-}
-nav .login .cart-icon::after {
-  display: inline-block;
-  content: "1";
-  background-color: var(--second-color);
-  color: var(--main-color);
-  font-size: 10px;
-  text-align: center;
-  border-radius: 50%;
-  padding: 3px 5px;
-  position: absolute;
-  top: -7px;
-  right: -7px;
-  font-weight: 900;
-}
-nav .menu{
-    display: none;
-    font-size: 25px;
-    cursor: pointer;
-}
-@media (max-width: 767px) {
-    nav .list{
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        top: 71px;
-        background-color: var(--main-color);
-        width: 100%;
-        right: -900px;
-        transition-duration: 0.5s;
-        padding: 0;
-        gap: 0;
-        z-index: 6;
-    }
-    nav .list.active{
-      right: 0;
-    }
-    nav .list > li{
-    padding: 10px;
-    margin: 20px 0;
-    color: white;
-    width: 130px;
-    text-align: center;
-    }
-    nav .menu{
-        display: block;
-    }
-    nav .shop:hover + .cat,
-    nav .list .cat.active{
-      display: block;
-      position: relative;
-      top: -15px;
-      left: 0;
-      background-color: #1d2632;
-      border-radius: 10px;
-      overflow: hidden;
-      }
-    nav .list .cat-item{
-      padding: 15px;
-      transition-duration: 0.2s;
-  }
-  nav .list .cat-item:hover {
-      background-color: #1d2632;
-  }
-
-  }
-
-  .cart{
-    height: 100vh;
-    width: 600px;
-    background-color: #f6f6f6;
-    position: fixed;
-    top: 0;
-    right: -700px;
-    z-index: 5;
-    transition-duration: 0.5s;
-  }
-  .cart.active{
-    right: 0;
-  }
-
-  .cart .close{
-    position: absolute;
-    color: #666;
-    top: 10px;
-    left: 10px;
-    font-size: 20px;
-    cursor: pointer;
-  }
-  @media (max-width: 767px) {
-    .cart{
-      top: 71px;
-    }
-    .cart.active{
-      right: 0;
-      width: 100%;
-    }
-    .overlay.active {
-      width: 0;
-      height: 0;
-    }
-  }
