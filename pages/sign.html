@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/master.css" />
+    <link rel="stylesheet" href="../css/sign.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <title>project</title>
+</head>
+
+<body>
+    <nav class="header">
+
+        <div class="container">
+
+            <div class="up">
+
+                <div class="logo">
+                    <img src="../images/logo.png" alt="">
+                    E Commerce
+                </div>
+
+                <div class="srch-box">
+
+                    <div class="menu-btn fa-solid fa-bars"></div>
+
+                    <div class="srch-text">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+
+                    <div class="srch-btn fa-solid fa-magnifying-glass">
+                        <input type="button">
+                    </div>
+
+
+                </div>
+
+
+                <div class="btns">
+                    <a href="#" class="fav-btn fa fa-regular fa-heart"></a>
+                    <a href="#" class="cart-btn fa-solid fa-cart-shopping">
+                        <span class="count">1</span>
+                    </a>
+                    <a href="#" class="account-btn fa-regular fa-user"></a>
+                </div>
+
+            </div>
+
+            <div class="down">
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li class="cat-link ">
+                        <span class="cat-link-text">Category</span>
+                        <ul class="cat-list">
+                            <li><a href="#">Cat 1</a></li>
+                            <li><a href="#">Cat 2</a></li>
+                            <li><a href="#">Cat 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </nav>
+    <hr>
+
+    <section class="forms">
+
+
+        <div class="form logup">
+
+            <div class="LOG">
+                <h3>SIGN UP</h3>
+            </div>
+            <hr>
+            <div class="signup">
+
+                <form>
+                    <div class="conf_name">
+                        <label for="id_nm">Your Name:</label>
+                        <label for="id_surnm">Your Surname:</label>
+                        <br>
+                        <input type="text" name="name" class="name" id="id_nm" placeholder="enter your name">
+                        <input type="text" name="surname" class="name" id="id_surnm" placeholder="enter your surname">
+
+                    </div>
+                    <div class="conf_phn">
+                        <label for="id_phn">Your Phone:</label> <input type="text" name="phone" class="phone"
+                            id="id_phn" placeholder="enter your phone">
+                        <br>
+                    </div>
+                    <div class="conf_emil">
+                        <label> Your E-mail Adress:</label>
+
+                        <input type="email" name="email" placeholder="enter your email">
+                        <br>
+                    </div>
+                    <div class="conf_pass">
+                        <label> Your Password:</label>
+                        <br>
+                        <input type="password" name="pass" placeholder="enter your password">
+                        <br>
+                        <p>Password must be 8-20 characters</p>
+                    </div>
+                    <div class="conf_cpass">
+                        <label>Comfirm Password:</label>
+                        <br>
+                        <input type="password" name="cpass" placeholder="confirm your password">
+                        <br>
+
+
+                    </div>
+                    <div class="acount" style="text-align: center;">
+                        <span>Have Already an acount?</span><a style="color:var(--default-color)" href="#"
+                            class="link sign-up">Sign In</a>
+                    </div>
+
+                    <input type="submit" value="REGISTER NOW" class="submit">
+                    <br>
+                    <hr>
+                    <div class="check">
+
+                        <input type="checkbox"> <label>I agree with <span style="color: var(--default-color)">Teams
+                                and
+                                Condtions</span></label>
+                    </div>
+
+                </form>
+
+            </div>
+            <br> <br>
+
+
+        </div>
+
+
+
+
+        <div class="form login">
+
+            <div class="LOG">
+                <h3>SIGN IN</h3>
+            </div>
+
+            <hr>
+
+
+            <div class="signin">
+
+                <form>
+
+                    <div class="log_email">
+                        <label> Your E-mail Adress:</label>
+
+                        <input type="email" name="email" placeholder="enter your email">
+                        <br>
+                    </div>
+                    <div class="log_pass">
+                        <label> Your Password:</label>
+                        <br>
+                        <input type="password" name="pass" placeholder="enter your password">
+                        <br>
+
+                    </div>
+
+
+
+            <input type="submit" value="SIGN IN" class="submit">
+
+
+            <hr>
+
+
+            <div class="acount" style="text-align: center;">
+                <span>Have Already an acount?</span><a style="color:var(--default-color)" href="#"
+                    class=" link sign-in">Sign
+                    Up</a>
+            </div>
+
+
+            <br>
+
+        </form>
+
+        </div>
+
+
+
+       
+
+        </div>
+
+
+
+
+
+    </section>
+
+
+    <script src="../js/sign.js"></script>
+</body>
+
+</html>
