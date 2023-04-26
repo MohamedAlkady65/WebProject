@@ -1,0 +1,214 @@
+
+.cart .title{
+    font-size: 30px;
+}
+.cart .parent{
+    display: flex;
+    gap: 20px;
+}
+.cart .parent .main{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid var(--input-color);
+    padding: 15px;
+    border-radius: 5px;
+}
+.cart .parent .main .one {
+ display: flex;
+ justify-content: space-between;
+ border-bottom: 1px solid var(--input-color);
+ padding: 10px;
+}
+.cart .parent .main .one .left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.cart .parent .main .one .left .img {
+    width: 130px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--input-color);
+    border-radius: 5px;
+}
+.cart .parent .main .one .left .img img {
+ width: 100%;
+ max-height: 100%;
+ border-radius: 5px;
+
+}
+
+.cart .parent .main .one .left .info .pro-name{
+    font-size: 25px;
+    margin: 0 0 10px;
+}
+.cart .parent .main .one .left .info .stock{
+    color: rgb(0, 199, 0);
+}
+.cart .parent .main .one .left .info .desc{
+    color: var(--disabled-color);
+    margin-bottom:20px ; 
+}
+.cart .parent .main .one .left .info .price-line {
+    display: flex;
+    gap: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+
+}
+.cart .parent .main .one  .right {
+ display: flex;
+ align-items: center;
+ gap: 5px;
+ flex-direction: column;
+}
+
+.cart .parent .main .one .right .tot-price-line {
+    display: flex;
+    gap: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+
+}
+.cart .parent .main .one .right .tot-price-line {
+    display: flex;
+    gap: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    color: var(--hover-color);
+
+}
+
+
+.cart .parent .main .one .right .counter{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid var(--default-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+.counterNumber{
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 25px;
+    text-align: center;
+}
+.incrBtn,
+.decrBtn{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid var(--default-color);
+    border-radius: 5px;
+    position: relative;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.incrBtn:hover,
+.decrBtn:hover {
+    border-color: var(--hover-color);
+    border-width: 2px;
+}
+
+.incrBtn:hover::before,
+.decrBtn:hover::before {
+    color: var(--hover-color);
+}
+
+.incrBtn::before,
+.decrBtn::before {
+    position: absolute;
+    font-size: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--default-color);
+}
+
+.cart .parent .main .one  .del-btn{
+    color: var(--default-color);
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition-duration: 0.2s;
+}
+.cart .parent .main .one .del-btn:hover{
+    color: var(--hover-color);
+    opacity: 1;
+}
+
+
+.cart .parent .check-out {
+    flex-grow: 1;
+    background-color: gray;
+    height: 500px;
+}
+
+@media (max-width:750px) {
+    .cart .parent{
+        flex-direction: column;
+    }
+    .cart .parent .main{
+        width: 100%;
+    }
+    .cart .parent .main .one .left {
+        gap: 10px;
+    }
+    .cart .parent .main .one .left .img {
+        width: 100px;
+        padding: 7px;
+    }
+    .cart .parent .main .one .left .info .pro-name{
+        font-size: 13px;
+        margin: 0 0 5px;
+    }
+    .cart .parent .main .one .left .info .stock{
+        font-size: 14px;
+        margin: 0 0 5px;
+    }
+    .cart .parent .main .one .left .info .price-line {
+        margin: 5px 0 0 0;
+        font-size: 15px;
+    }
+    .cart .parent .main .one  .right {
+     gap: 10px;
+    }
+
+    .cart .parent .main .one .right .tot-price-line {
+        gap: 5px;
+        font-size: 25px;
+    }
+    
+    .counterNumber{
+        font-size: 16px;
+        min-width: 20px;
+    }
+    .incrBtn,
+    .decrBtn{
+        width: 25px;
+        height: 25px;
+    }
+    
+
+    
+    .incrBtn::before,
+    .decrBtn::before {
+        font-size: 20px;
+    }
+    
+    .cart .parent .main .one  .del-btn{
+        font-size: 16px;  
+    }
+  
+    
+
+}

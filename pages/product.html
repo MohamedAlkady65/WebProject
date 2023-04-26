@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/master.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/product.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <title>Project</title>
+</head>
+
+<body >
+
+
+
+    <nav class="header">
+
+        <div class="container">
+
+            <div class="up">
+
+                <div class="logo">
+                    <img src="../images/logo.png" alt="">
+                    E Commerce
+                </div>
+
+                <div class="srch-box">
+
+                    <div class="menu-btn fa-solid fa-bars"></div>
+
+                    <div class="srch-text">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+
+                    <div class="srch-btn fa-solid fa-magnifying-glass">
+                        <input type="button">
+                    </div>
+
+
+                </div>
+
+
+                <div class="btns">
+                    <a href="#" class="fav-btn fa fa-regular fa-heart"></a>
+                    <a href="#" class="cart-btn fa-solid fa-cart-shopping">
+                        <span class="count">1</span>
+                    </a>
+                    <a href="#" class="account-btn fa-regular fa-user"></a>
+                </div>
+
+            </div>
+
+            <div class="down">
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li class="cat-link ">
+                        <span class="cat-link-text">Category</span>
+                        <ul class="cat-list">
+                            <li><a href="#">Cat 1</a></li>
+                            <li><a href="#">Cat 2</a></li>
+                            <li><a href="#">Cat 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </nav>
+
+    <div class="product-show">
+        <div class="container">
+            <h3 class="title">Product Name</h3>
+            <div class="parent">
+
+                <div class="img-box">
+                    <div class="main-img">
+                        <img src="../images/pro.jpg" alt="">
+                    </div>
+
+                    <div class="sub-imgs">
+                        <div class="img active">
+                            <img src="../images/pro.jpg" alt="">
+                        </div>
+
+                        <div class="img">
+                            <img src="../images/pro.jpg" alt="">
+                        </div>
+
+                        <div class="img">
+                            <img src="../images/pro.jpg" alt="">
+                        </div>
+
+                        <div class="img">
+                            <img src="../images/pro.jpg" alt="">
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="main">
+                    <div class="info">
+                        <h4 class="pro-name">Product-name</h4>
+                        <span class="stock">In Stock</span>
+                        <p class="desc">Description</p>
+                        <div class="price-line">
+                            <span class="curr">$</span>
+                            <span class="price">30</span>
+                        </div>
+                    </div>
+
+                    <div class="buy-box">
+
+                        <div class="counter">
+                            <span class="decr fa-solid fa-minus" id="decrBtn"></span>
+                            <span class="num" id="counterNumber">1</span>
+                            <span class="incr fa-solid fa-plus" id="incrBtn"></span>
+                        </div>
+                        <div class="add-cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="text"> Add to Cart</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="description">
+                <h3 class="sec-tit">Description</h3>
+                <hr>
+                <div class="content">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, nesciunt quae natus consequatur, dolores itaque et saepe sequi voluptate porro excepturi repudiandae, deserunt asperiores explicabo voluptatum enim! Molestiae, repudiandae dolor?</p>
+                </div>
+            </div>
+
+            <div class="specif">
+                <h3 class="sec-tit">Specifications</h3>
+                <hr>
+                <p class="content">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="feature">Feature</td>
+                                <td class="value">Value</td>
+                            </tr>
+                            <tr>
+                                <td class="feature">Feature</td>
+                                <td class="value">Value</td>
+                            </tr>
+                            <tr>
+                                <td class="feature">Feature</td>
+                                <td class="value">Value</td>
+                            </tr>
+                            <tr>
+                                <td class="feature">Feature</td>
+                                <td class="value">Value</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </p>
+            </div>
+
+            <div class="reviews">
+                <div class="rev-head">
+                    <h3 class="sec-tit" >Reviews</h3>
+                    <div class="write" id="writeRevBtn">
+                        <i class="fa-solid fa-pen" ></i>
+                        <span class="text">Write A Review</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="content">
+                    <div class="rev">
+                        <div class="img">
+                            <img src="../images/user.png" alt="">
+                        </div>
+                        <div class="rev-text">
+                            <h3 class="name">User Name</h3>
+                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, recusandae obcaecati porro saepe maxime eligendi, dolor cum facere cupiditate unde quia tenetur ab aut reprehenderit nostrum est. Ullam, ipsa veniam!</p>
+                        </div>
+                    </div>
+                    <div class="rev">
+                        <div class="img">
+                            <img src="../images/user.png" alt="">
+                        </div>
+                        <div class="rev-text">
+                            <h3 class="name">User Name</h3>
+                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, recusandae obcaecati porro saepe maxime eligendi, dolor cum facere cupiditate unde quia tenetur ab aut reprehenderit nostrum est. Ullam, ipsa veniam!</p>
+                        </div>
+                    </div>
+                    <div class="rev">
+                        <div class="img">
+                            <img src="../images/user.png" alt="">
+                        </div>
+                        <div class="rev-text">
+                            <h3 class="name">User Name</h3>
+                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, recusandae obcaecati porro saepe maxime eligendi, dolor cum facere cupiditate unde quia tenetur ab aut reprehenderit nostrum est. Ullam, ipsa veniam!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="pop-up" id="pop-review">
+        <span class="fa-solid fa-square-xmark close-btn"></span>
+        <form action="">
+            <br>
+            <textarea name="reviewText"  class="rev-textbox" placeholder="Write You Review Here ..." ></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+
+    <div class="overlay"></div>
+
+
+    <script src="../js/header.js"></script>
+    <script src="../js/product.js"></script>
+</body>
+
+</html>
