@@ -1,259 +1,271 @@
 /* start sign */
-.forms
-{
+* {
+    box-sizing: border-box;
+}
+
+.forms {
     width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 100px 0;
+    /* margin: 100px 0; */
 }
 
- .form
-{
+.form {
     width: 500px;
     background-color: #ffffff;
-     border-radius: 10px;
+    border-radius: 10px;
     margin-top: 50px;
     box-shadow: 2px 2px 10px silver;
     margin: auto;
-    top :200px;
+    top: 200px;
     display: none;
+    padding: 20px;
 
 }
 
-.form.active{
+.form.active {
     display: block;
 }
 
 
-.LOG
-{
+.LOG {
     display: flex;
     justify-content: center;
     text-align: center;
     color: var(--default-color);
     font-size: 26px;
     font-weight: 600;
+    margin-bottom: 20px;
 }
- .form input
-{
+
+.form input {
     background-color: var(--input-color);
 
 }
 
- .form .conf_name
-{
-    height: 80px;
+.form .conf_name {
+    display: flex;
+    justify-content: space-between;
 
 }
- .form .conf_name label
-{
-    padding-right:100px;
-    padding-left: 35px
+
+.form .conf_name label {
 }
- .form .conf_name input
-{
+
+.form .conf_name input {
+    width: 100%;
     border-radius: 10px;
-    margin-left: 13px;
     padding: 15px;
     border: 1px solid var(--default-color);
     outline: none;
     box-shadow: 0px 5px 20px silver;
-
-}
-
- .form .conf_phn
-{
-    height: 80px;
-}
-.form .conf_phn label
-{
-    margin-right: 17px;
-    margin-left: 12px;
-}
-
- .form .conf_phn input
-{
-    width: 70%;
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid var(--default-color);
-    box-shadow: 0px 5px 20px silver;
-}
-
-.form .conf_emil
-{
-    height: 80px;
-}
- .form .conf_emil label
-{
-    margin-right: 60%;
-    margin-left: 12px;
-}
-.form .conf_emil input
-{
-    width: 93%;
-    padding: 15px;
-    border-radius: 10px;
-    margin-left: 12px;
-    border: 1px solid var(--default-color);
-    box-shadow: 0px 5px 20px silver;
-}
- .form .conf_pass
-{
-    height: 120px;
-}
-
-.form .conf_pass label
-{
-    margin-right: 66%;
-    margin-left: 12px
-    
-}
- .form .conf_pass input
-{
-    width: 93%;
-    padding: 15px;
-    border-radius: 10px;
-    margin-left: 12px;
-    border: 1px solid var(--default-color);
-    box-shadow: 0px 5px 20px silver;
-}
-
-
-
- .form .conf_cpass label
-{
-    margin-right: 60%;
-    margin-left: 12px;
-}
+    margin-bottom: 25px;
+    margin-top: 12px;
     
 
- .form .conf_pass p{
-
-
-color: var(--default-color);
-display: flex;
-margin-left: 14px;
-font-size: 12px;
 }
- .form .conf_cpass
-{
-    height: 90px;
+
+.form .conf_phn {
+    /* height: 80px; */
 }
- .form .conf_cpass input
-{
-    width:93%;
+
+.form .conf_phn label {
+    /* margin-right: 17px; */
+    /* margin-left: 12px; */
+}
+
+.form .conf_phn input {
+    width: 100%;
     padding: 15px;
     border-radius: 10px;
-margin-left: 12px;
-border: 1px solid var(--default-color);
-box-shadow: 0px 5px 20px silver;
+    border: 1px solid var(--default-color);
+    box-shadow: 0px 5px 20px silver;
+    margin-bottom: 25px;
+    margin-top: 12px;
+}
+
+.form .conf_emil {
+    /* height: 80px; */
+}
+
+.form .conf_emil label {
+    /* margin-right: 60%; */
+    /* margin-left: 12px; */
+}
+
+.form .conf_emil input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    /* margin-left: 12px; */
+    border: 1px solid var(--default-color);
+    box-shadow: 0px 5px 20px silver;
+    margin-bottom: 25px;
+    margin-top: 12px;
+}
+
+.form .conf_pass {
+    /* height: 120px; */
+}
+
+.form .conf_pass label {
+    /* margin-right: 66%; */
+    /* margin-left: 12px */
+}
+
+.form .conf_pass input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    /* margin-left: 12px; */
+    border: 1px solid var(--default-color);
+    box-shadow: 0px 5px 20px silver;
+    /* margin-bottom: 25px; */
+    margin-top: 12px;
 }
 
 
-.form .submit{
-width: 93%;
+
+.form .conf_cpass label {
+    /* margin-right: 60%; */
+    /* margin-left: 12px; */
+}
+
+
+.form .conf_pass p {
+
+
+    color: var(--default-color);
+    display: flex;
+    /* margin-left: 14px; */
+    font-size: 12px;
+}
+
+.form .conf_cpass {
+    /* height: 90px; */
+}
+
+.form .conf_cpass input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    /* margin-left: 12px; */
+    border: 1px solid var(--default-color);
+    box-shadow: 0px 5px 20px silver;
+    margin-bottom: 25px;
+    margin-top: 12px;
+}
+
+
+.form .submit {
+    width: 200px;
     padding: 15px;
     color: white;
     background-color: var(--default-color);
     border-radius: 10px;
     cursor: pointer;
-    margin-left: 12px;
+    /* margin-left: 12px; */
     transition: all 0.3 s ease;
     box-shadow: 0px 5px 20px silver;
+    margin-bottom: 10px;
 }
- .form .submit:hover
-{
+
+.sign_div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form .submit:hover {
     background-color: var(--hover-color);
 }
 
 
- .form .check
-{
+.form .check {
     text-align: center;
 }
- .form .log_email {
-    height: 115px;
-    }
- .form .log_email label
-{
-    margin-right: 60%;
-    margin-left: 12px
+
+.form .log_email {
+    /* height: 115px; */
 }
 
- .form .log_email input
-{
-    width: 93%;
+.form .log_email label {
+    /* margin-right: 60%; */
+    /* margin-left: 12px */
+}
+
+.form .log_email input {
+    width: 100%;
     padding: 15px;
     border-radius: 10px;
-    margin-left: 12px;
+    /* margin-left: 12px; */
     border: 1px solid var(--default-color);
-    margin-top: 18px;
-    box-shadow: 0px 5px 20px silver
+    margin-top: 12px;
+    box-shadow: 0px 5px 20px silver;
+    margin-bottom: 25px;
 
 }
 
 
 .form .log_pass {
-    height: 125px;
-    }
-.form .log_pass label
-{
-    margin-right: 60%;
-    margin-left: 12px
+    /* height: 125px; */
 }
 
- .form .log_pass input
-{
-    width: 93%;
+.form .log_pass label {
+    /* margin-right: 60%; */
+    /* margin-left: 12px */
+}
+
+.form .log_pass input {
+    width: 100%;
     padding: 15px;
     border-radius: 10px;
-    margin-left: 12px;
+    /* margin-left: 12px; */
     border: 1px solid var(--default-color);
-    margin-top: 18px;
-    box-shadow: 0px 5px 20px silver
+    margin-top: 12px;
+    box-shadow: 0px 5px 20px silver;
+    margin-bottom: 40px;
 }
 
- .form.log_rem
-{
+.form.log_rem {
     display: flex;
     justify-content: flex-end;
 }
 
-@media (max-width: 600px)
-{
-    .form
-    {
+@media (max-width: 600px) {
+    .form {
         width: 300px;
     }
+
     .form .log_email label,
-    .form .log_pass label{
+    .form .log_pass label {
         font-size: 11px;
     }
-    .form .conf_name label
-    {
+
+    .form .conf_name label {
         font-size: 11px;
         padding: 0px;
-        margin-right: 58px;
-        margin-left: 15px;
+        /* margin-right: 58px;
+        margin-left: 15px; */
     }
-    .form .conf_name input
-    {
+
+    .form .conf_name input {
         width: 130px;
         font-size: 10px;
     }
+
     .form .conf_phn label,
     .form .conf_pass label,
     .form .conf_emil label,
-    .form .conf_cpass label
-    {
+    .form .conf_cpass label {
         font-size: 11px;
     }
-    .form .conf_phn input
-    {
-        width: 93%;
-        margin-left: 12px;
+
+    .form .conf_phn input {
+        width: 100%;
+        /* margin-left: 12px; */
     }
 
 

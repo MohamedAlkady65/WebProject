@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <nav class="header">
+    <!-- <nav class="header">
 
         <div class="container">
 
@@ -76,7 +76,7 @@
 
 
         </div>
-    </nav>
+    </nav> -->
     <section class="forms">
 
 
@@ -85,25 +85,29 @@
             <div class="LOG">
                 <h3>SIGN UP</h3>
             </div>
-            <hr>
+            <!-- <hr> -->
             <div class="signup">
 
                 <form>
                     <div class="conf_name">
-                        <label for="id_nm">Your Name:</label>
-                        <label for="id_surnm">Your Surname:</label>
-                        <br>
-                        <input type="text" name="name" class="name" id="id_nm" placeholder="enter your name">
-                        <input type="text" name="surname" class="name" id="id_surnm" placeholder="enter your surname">
+                        <div style="width:47%">
+                            <label for="id_nm">Your Name:</label>
+                            <input type="text" name="name" class="name" id="id_nm" placeholder="enter your name">
+                        </div>
+                        <div style="width:47%">
+                            <label for="id_surnm">Your Surname:</label>
+                            <input type="text" name="surname" class="name" id="id_surnm"
+                                placeholder="enter your surname">
+                        </div>
 
                     </div>
                     <div class="conf_phn">
-                        <label for="id_phn">Your Phone:</label> <input type="text" name="phone" class="phone"
+                        <label for="id_phn">Your Phone:</label>
+                        <br> <input type="text" name="phone" class="phone"
                             id="id_phn" placeholder="enter your phone">
-                        <br>
                     </div>
                     <div class="conf_emil">
-                        <label> Your E-mail Adress:</label>
+                        <label> Your E-mail Address:</label>
 
                         <input type="email" name="email" placeholder="enter your email">
                         <br>
@@ -116,26 +120,28 @@
                         <p>Password must be 8-20 characters</p>
                     </div>
                     <div class="conf_cpass">
-                        <label>Comfirm Password:</label>
+                        <label>Confirm Password:</label>
                         <br>
                         <input type="password" name="cpass" placeholder="confirm your password">
                         <br>
 
 
                     </div>
-                    <div class="acount" style="text-align: center;">
-                        <span>Have Already an acount?</span><a style="color:var(--default-color)" href="#"
+                    <div class="acount" style="text-align: center;margin: 10px;">
+                        <span>Have Already an acount?</span><a style="color:var(--default-color);margin: 10px;" href="#"
                             class="link sign-up">Sign In</a>
                     </div>
 
-                    <input type="submit" value="REGISTER NOW" class="submit">
+                    <div class="sign_div">
+                        <input type="submit" value="REGISTER NOW" class="submit">
+                    </div>
                     <br>
-                    <hr>
+                    <!-- <hr> -->
                     <div class="check">
 
                         <input type="checkbox"> <label>I agree with <span style="color: var(--default-color)">Teams
                                 and
-                                Condtions</span></label>
+                                Conditions</span></label>
                     </div>
 
                 </form>
@@ -152,10 +158,10 @@
         <div class="form login active">
 
             <div class="LOG">
-                <h3>SIGN IN</h3>
+                <h3>LOGIN</h3>
             </div>
 
-            <hr>
+            <!-- <hr> -->
 
 
             <div class="signin">
@@ -177,16 +183,16 @@
                     </div>
 
 
+                    <div class="sign_div">
+                        <input type="submit" value="SIGN IN" class="submit">
+                    </div>
 
-                    <input type="submit" value="SIGN IN" class="submit">
-
-
-                    <hr>
+                    <!-- <hr> -->
 
 
                     <div class="acount" style="text-align: center;">
-                        <span>Have Already an acount?</span><a style="color:var(--default-color)" href="#"
-                            class=" link sign-in">Sign
+                        <span>Have Already an acount?</span><a style="color:var(--default-color);padding: 10px;"
+                            href="#" class=" link sign-in">Sign
                             Up</a>
                     </div>
 
@@ -201,7 +207,7 @@
 
     </section>
 
-    <footer>
+    <!-- <footer>
         <div class="content">
           <div class="logo">
             <img src="../images/logo.png" alt="">
@@ -246,7 +252,7 @@
     
     
         </div>  
-      </footer>
+      </footer> -->
 
 
     <script src="../js/header.js"></script>
