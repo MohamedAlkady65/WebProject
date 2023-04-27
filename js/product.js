@@ -2,7 +2,7 @@
 let writeRevBtn = document.getElementById("writeRevBtn")
 let popReview = document.getElementById("pop-review")
 let overlay = document.querySelector(".overlay");
-let closePopReview = document.querySelector(".pop-up .close-btn");
+let closePop = document.querySelector(".pop-up .close-btn");
 let revTextBox = document.querySelector(".rev-textbox");
 
 
@@ -25,7 +25,7 @@ writeRevBtn.onclick =()=>{
 
 }
 
-closePopReview.onclick =()=>{
+closePop.onclick =()=>{
     popReview.classList.remove("active");
     overlay.classList.remove("active");
     document.body.classList.remove("poped");

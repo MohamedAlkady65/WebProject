@@ -1,4 +1,7 @@
 /* start footer */
+footer  {
+margin-top: 100px;
+}
 footer .content {
     padding: 0px 88px;
     background-color: #F2F2F2;
