@@ -29,12 +29,10 @@ ul {
 input{
   border: none;
 }
-input:focus{
+*:focus{
   outline: none;
 }
-textarea:focus{
-  outline: none;
-}
+
 .container {
   padding-left: 20px;
   padding-right: 20px;
