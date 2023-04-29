@@ -29,25 +29,25 @@
             <h1>E</h1>
             <ul>
                 <li>
-                    <a class="" href="index.html">
+                    <a class="" href="#">
                         <i class="fa-regular fa-chart-bar fa-fw"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a class="active" href="index.html">
+                    <a class="active" href="#">
                         <i class="fa-regular fa-chart-bar fa-fw"></i>
                         <span>Products</span>
                     </a>
                 </li>
                 <li>
-                    <a class="" href="index.html">
+                    <a class="" href="categories.html">
                         <i class="fa-regular fa-chart-bar fa-fw"></i>
                         <span>Categories</span>
                     </a>
                 </li>
                 <li>
-                    <a class="" href="index.html">
+                    <a class="" href="#">
                         <i class="fa-regular fa-chart-bar fa-fw"></i>
                         <span>Orders</span>
                     </a>
@@ -65,9 +65,41 @@
 
 
         <div class="content">
-            <div class="parent par-cate active">
+            <div class="parent par-product active">
 
                 <div class="for-pad">
+                    <div class="filter">
+                        <div class="srch-box">
+
+                            <div class="srch-text">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="text" placeholder="Search">
+                            </div>
+
+                            <div class="srch-btn fa-solid fa-magnifying-glass">
+                                <input type="button">
+                            </div>
+
+                        </div>
+                        <div class="right">
+                            <div>
+                                <label for="">Category :</label>
+                                <select name="" id="">
+                                    <option value="">All</option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="">Sub-Category :</label>
+                                <select name="" id="">
+                                    <option value="">All</option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                     <div class="table">
                         <div class="table-head">
                             <div class="row">
@@ -81,15 +113,15 @@
                                 <div class="head-cell"></div>
                             </div>
                         </div>
-    
+
                         <div class="table-body">
 
-                        
+
                             <div class="row">
                                 <div class="body-cell">#123</div>
                                 <div class="body-cell">
                                     <span class="cat-name">asd</span>
-                                    <input type="text" class="edit-input" >
+                                    <input type="text" class="edit-input">
                                 </div>
                                 <div class="body-cell">#123</div>
                                 <div class="body-cell">#123</div>
@@ -103,22 +135,101 @@
                                     <span class="cancel-btn btn">Cancel</span>
                                 </div>
                             </div>
-                        
-                        
+
 
                         </div>
-    
+
                     </div>
                 </div>
 
                 <div class="for-pad">
-                    <div class="add-cate">
-                        <h3>Add Product</h3>
-                        <form action="">
+                    <form action="../../php/dash_board/add_product.php" method="post" class="add-pro" enctype="multipart/form-data">
+                        <div class="head">
+                            <h3>Add Product</h3>
+                            <input type="submit" value="Add">
+                        </div>
+                        <div class="up">
+                            <input type="text" placeholder="Product Name" name="name">
+                            <input type="number" placeholder="Price" name="price">
+                            <input type="number" placeholder="Stock" name="stock">
+                            <div class="select-box">
+                                <label for="">Category</label>
+                                <select name="cate">
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                </select>
+                            </div>
+                            <div class="select-box" >
+                                <label for="">Sub-Category</label>
+                                <select name="subcate">
+                                    <option value="27">1</option>
+                                    <option value="28">2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="down">
+                            <textarea name="desc" id="" placeholder="Description"></textarea>
 
-                        </form>
-                        <div></div>
-                    </div>
+
+
+                            <div class="spec">
+                                <h6>Specifications</h6>
+                                <div class="inps">
+                                    <input type="text" placeholder="Feature" id="fea-name-input">
+                                    <input type="text" placeholder="Value" id="fea-value-input">
+                                    <span class="incr fa-solid fa-plus" id="add-fea"></span>
+                                </div>
+                                <div class="table spec-show">
+                                    <div class="table-head">
+                                        <div class="row">
+                                            <div class="head-cell">Feature</div>
+                                            <div class="head-cell">Value</div>
+                                            <div class="head-cell"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="table-body" id="preview-fea">
+
+
+                                        <!-- <div class="row">
+                                            <div class="body-cell fea-name">#123</div>
+                                            <div class="body-cell fea-value">#123</div>
+                                            <div class="body-cell">
+                                                <span class="fa-solid fa-circle-xmark del-btn"></span>
+                                            </div>
+                                        </div> -->
+
+
+
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                            <div class="add-img">
+                                <label for="">Choose Images And Select Default</label>
+                                <input type="file" name="imgsToUpload[]" id="imgsToUpload" accept="image/*"
+                                    multiple>
+                                <div class="show-imgs">
+                                    <!-- <div class="one">
+                                        <input type="radio" name="defaultImg" value="0" id="0-pro-img">
+                                        <label class="img" for="0-pro-img">
+                                            <img src="../../images/pro.jpg" alt="">
+                                        </label>
+                                        <div></div>
+                                    </div> -->
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <input type="hidden" name="spec" id="fea-values">
+                    </form>
                 </div>
 
 
@@ -132,7 +243,7 @@
         </div>
     </div>
 
-    <div class="pop-up " id="" >
+    <div class="pop-up " id="">
         <div></div>
         <p></p>
         <div class="pop-up-btns">
@@ -142,7 +253,7 @@
     </div>
 
 
-    
+
     <div class="pop-up " id="">
         <div></div>
         <div>

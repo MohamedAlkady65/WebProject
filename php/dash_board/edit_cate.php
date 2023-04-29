@@ -2,8 +2,8 @@
 
 include("../general/conn.php");
 
-$cate_id=1;
-$newname="klklkl";
+$cate_id=$_POST['cate_id'];
+$newname=$_POST['cate_name'];
 
 
 $sql="UPDATE cates SET cat_name = '$newname' WHERE cat_id=$cate_id";

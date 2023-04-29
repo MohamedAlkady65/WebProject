@@ -135,3 +135,12 @@
     font-size: 30px;
     width: 200px;
 }
+#pop-up-alert p{
+    color: red;
+}
+#pop-up-alert input{
+    background-color: #b6b6b6;
+}
+#pop-up-alert input:hover{
+    background-color: #7f7f7f;
+}

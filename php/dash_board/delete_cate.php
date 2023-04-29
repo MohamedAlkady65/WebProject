@@ -2,7 +2,7 @@
 
 include("../general/conn.php");
 
-$cate_id=4;
+$cate_id=$_POST['cate_id'];
 
 
 $sql="DELETE p FROM products p 

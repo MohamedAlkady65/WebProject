@@ -3,7 +3,7 @@
 include("../general/conn.php");
 
 
-$name="kkk";
+$name=$_POST["input-cate-name"];
 
 
 $sql="INSERT INTO cates VALUES('','$name')";
@@ -16,5 +16,8 @@ else
 echo "no";
 
 mysqli_close($conn);
+
+header("Location: ../../pages/Dashboard/categories.html");
+
 
 ?>

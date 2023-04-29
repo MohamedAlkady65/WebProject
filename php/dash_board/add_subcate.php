@@ -2,8 +2,8 @@
 
 include("../general/conn.php");
 
-$cate_id=4;
-$name="eded";
+$cate_id=$_POST["cate-id"];
+$name=$_POST["input-subcate-name"];
 
 
 $sql="INSERT INTO sub_cates VALUES('','$cate_id','$name')";
@@ -16,5 +16,8 @@ else
 echo "no";
 
 mysqli_close($conn);
+
+header("Location: ../../pages/Dashboard/subcategories.html");
+
 
 ?>

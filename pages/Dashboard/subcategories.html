@@ -35,25 +35,25 @@
                     </a>
                 </li>
                 <li>
-                    <a class="" href="index.html">
+                    <a class="" href="products.html">
                         <i class="fa-regular fa-chart-bar fa-fw"></i>
                         <span>Products</span>
                     </a>
                 </li>
                 <li>
-                    <a class="active" href="index.html">
+                    <a class="active" href="categories.html">
                         <i class="fa-regular fa-chart-bar fa-fw"></i>
                         <span>Categories</span>
                     </a>
                 </li>
                 <li>
-                    <a class="" href="index.html">
+                    <a class="" href="#">
                         <i class="fa-regular fa-chart-bar fa-fw"></i>
                         <span>Orders</span>
                     </a>
                 </li>
                 <li>
-                    <a class="" href="index.html">
+                    <a class="" href="#">
                         <i class="fa-regular fa-chart-bar fa-fw"></i>
                         <span>Users</span>
                     </a>
@@ -88,8 +88,8 @@
     
                         <div class="table-body">
 
-                        
-                            <div class="row">
+<!--                         
+                            <div class="row" data-subcateid="0">
                                 <div class="body-cell">#123</div>
                                 <div class="body-cell">
                                     <span class="cat-name">asd</span>
@@ -111,51 +111,7 @@
                             </div>
                         
 
-                        
-                            <div class="row">
-                                <div class="body-cell">#123</div>
-                                <div class="body-cell">
-                                    <span class="cat-name">asd</span>
-                                    <input type="text" class="edit-input" >
-                                </div>
-                                <div class="body-cell">
-                                    <span class="cat-name">asd</span>
-                                    <select name="" id="" class="edit-input">
-                                        <option value="34">1</option>
-                                        <option value="67">2</option>
-                                    </select>
-                                </div>
-                                <div class="body-cell">
-                                    <span class="edit-btn btn">Edit</span>
-                                    <span class="fin-edit-btn btn">Edit</span>
-                                    <span class="delete-btn btn">Delete</span>
-                                    <span class="cancel-btn btn">Cancel</span>
-                                </div>
-                            </div>
-                        
-
-                        
-                            <div class="row">
-                                <div class="body-cell">#123</div>
-                                <div class="body-cell">
-                                    <span class="cat-name">asd</span>
-                                    <input type="text" class="edit-input" >
-                                </div>
-                                <div class="body-cell">
-                                    <span class="cat-name">asd</span>
-                                    <select name="" id="" class="edit-input">
-                                        <option value="34">1</option>
-                                        <option value="67">2</option>
-                                    </select>
-                                </div>
-                                <div class="body-cell">
-                                    <span class="edit-btn btn">Edit</span>
-                                    <span class="fin-edit-btn btn">Edit</span>
-                                    <span class="delete-btn btn">Delete</span>
-                                    <span class="cancel-btn btn">Cancel</span>
-                                </div>
-                            </div>
-                        
+                         -->
 
 
                         </div>
@@ -166,18 +122,15 @@
                 <div class="for-pad">
                     <div class="add-cate">
                         <h3>Add Sub-Category</h3>
-                        <form action="">
+                        <form action="../../php/dash_board/add_subcate.php" id="form-add-subcate" method="post">
                             <div class="left">
-                                <label for="">Sub-Category Name : </label>
-                                <br>
-                                <input type="text" >
+                                <input type="text" placeholder="Sub-Category Name" id="input-subcate-name" name="input-subcate-name" >
                             </div>
                             <div class="left">
                                 <label for="">Category Name : </label>
                                 <br>
-                                <select name="" id="" class="edit-input">
-                                    <option value="34">1</option>
-                                    <option value="67">2</option>
+                                <select name="cate-id" id="select-cate" class="edit-input">
+             
                                 </select>
                             </div>
                             <input type="submit" value="Add">
@@ -217,6 +170,17 @@
         <div class="pop-up-btns">
             <input type="button" value="OK" class="ok-btn">
             <input type="button" value="CANCEL" class="cancel-btn">
+        </div>
+    </div>
+
+    
+    <div class="pop-up" id="pop-up-alert">
+        <div></div>
+        <div>
+            <p></p>
+        </div>
+        <div class="pop-up-btns">
+            <input type="button" value="OK" class="ok-btn">
         </div>
     </div>
 

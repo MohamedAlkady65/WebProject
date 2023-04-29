@@ -86,6 +86,9 @@
     border-right: 1px solid var(--input-color);
     width: calc(100% / 3);
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 .content .parent .table .table-body
