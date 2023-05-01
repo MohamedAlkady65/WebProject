@@ -10,7 +10,7 @@ $disc=$_POST['desc'];
 $spec=$_POST['spec'];
 $price=$_POST['price'];
 $stock=$_POST['stock'];
- $def = $_POST['defaultImg'];
+$def = $_POST['defaultImg'];
 
 $sql="INSERT INTO products VALUES ('','$subcate_id','$name','$disc','$spec','$price','$stock')";
 
@@ -63,7 +63,10 @@ $fin = mysqli_multi_query($conn, $query);
 
 mysqli_close($conn);
 
-header("Location: ../../pages/Dashboard/products.html");
+if($fin)
+echo "ok";
+else
+echo "no";
 
 
 ?>

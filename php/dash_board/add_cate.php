@@ -17,7 +17,4 @@ echo "no";
 
 mysqli_close($conn);
 
-header("Location: ../../pages/Dashboard/categories.html");
-
-
 ?>

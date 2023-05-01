@@ -1,0 +1,17 @@
+<html>
+   <style>
+      input:invalid {
+         border: 2px solid red;
+      }
+      input:invalid + span {
+         color: red;
+         font-weight: bold;
+      }
+   </style>
+   <body>
+      <form>
+         <label for="name">Name:</label>
+         <input type="text" required pattern=".{3,}" title="Please enter at least 3 characters">
+      </form>
+   </body>
+</html>

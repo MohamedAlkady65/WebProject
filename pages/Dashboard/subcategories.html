@@ -121,16 +121,14 @@
 
                 <div class="for-pad">
                     <div class="add-cate">
-                        <h3>Add Sub-Category</h3>
-                        <form action="../../php/dash_board/add_subcate.php" id="form-add-subcate" method="post">
+                        <h3>Add Sub Category</h3>
+                        <form action="#" id="form-add-subcate" method="post" value="">
                             <div class="left">
-                                <input type="text" placeholder="Sub-Category Name" id="input-subcate-name" name="input-subcate-name" >
+                                <input type="text"  placeholder="Sub Category Name" id="input-subcate-name" name="input-subcate-name" formnovalidate   >
                             </div>
                             <div class="left">
-                                <label for="">Category Name : </label>
-                                <br>
-                                <select name="cate-id" id="select-cate" class="edit-input">
-             
+                                <select name="cate-id" id="select-cate" class="edit-input" required >
+                                    
                                 </select>
                             </div>
                             <input type="submit" value="Add">

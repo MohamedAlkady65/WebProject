@@ -73,18 +73,18 @@
 
                             <div class="srch-text">
                                 <i class="fa-solid fa-magnifying-glass"></i>
-                                <input type="text" placeholder="Search">
+                                <input type="text" placeholder="Search" id="srch-box-input">
                             </div>
 
-                            <div class="srch-btn fa-solid fa-magnifying-glass">
-                                <input type="button">
+                            <div class="srch-btn fa-solid fa-magnifying-glass" id="srch-btn-input">
+                                <input type="button" >
                             </div>
 
                         </div>
                         <div class="right">
                             <div>
                                 <label for="">Category :</label>
-                                <select name="" id="">
+                                <select id="filter-select-cate">
                                     <option value="">All</option>
                                     <option value=""></option>
                                     <option value=""></option>
@@ -92,7 +92,7 @@
                             </div>
                             <div>
                                 <label for="">Sub-Category :</label>
-                                <select name="" id="">
+                                <select id="filter-select-subcate">
                                     <option value="">All</option>
                                     <option value=""></option>
                                     <option value=""></option>
@@ -114,10 +114,10 @@
                             </div>
                         </div>
 
-                        <div class="table-body">
+                        <div class="table-body" id="products-table-body">
 
-
-                            <div class="row">
+<!-- 
+                            <div class="row" data-proid="">
                                 <div class="body-cell">#123</div>
                                 <div class="body-cell">
                                     <span class="cat-name">asd</span>
@@ -134,7 +134,7 @@
                                     <span class="delete-btn btn">Delete</span>
                                     <span class="cancel-btn btn">Cancel</span>
                                 </div>
-                            </div>
+                            </div> -->
 
 
                         </div>
@@ -143,7 +143,7 @@
                 </div>
 
                 <div class="for-pad">
-                    <form action="../../php/dash_board/add_product.php" method="post" class="add-pro" enctype="multipart/form-data">
+                    <form action="#" method="post" class="add-pro" enctype="multipart/form-data">
                         <div class="head">
                             <h3>Add Product</h3>
                             <input type="submit" value="Add">
@@ -153,17 +153,11 @@
                             <input type="number" placeholder="Price" name="price">
                             <input type="number" placeholder="Stock" name="stock">
                             <div class="select-box">
-                                <label for="">Category</label>
-                                <select name="cate">
-                                    <option value="">1</option>
-                                    <option value="">2</option>
+                                <select id="add-filter-select-cate" name="cate" required>
                                 </select>
                             </div>
                             <div class="select-box" >
-                                <label for="">Sub-Category</label>
-                                <select name="subcate">
-                                    <option value="27">1</option>
-                                    <option value="28">2</option>
+                                <select id="add-filter-select-subcate" name="subcate" required>
                                 </select>
                             </div>
                         </div>

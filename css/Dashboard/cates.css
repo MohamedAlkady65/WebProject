@@ -71,7 +71,7 @@
 }
 .content .parent .table .table-head
 {
-    height: 15%;
+    height: 50px;
 }
 .content .parent .table .table-head .row
 {
@@ -96,7 +96,7 @@
     display: flex;
     flex-direction: column;
     overflow: auto;
-    height: 85%;
+    height: calc(100% - 50px);
 }
 
 
@@ -221,14 +221,21 @@
 .content .parent .add-cate form input[type='text'],
 .content .parent .add-cate form select
 {
-    margin-top: 30px;
     background-color: var(--input-color);
     padding: 10px;
     border: 1px solid var(--disabled-color);
     border-radius: 5px;
     width: 350px;
-    
 
+
+}
+.content .parent .add-cate form select:invalid
+{
+    color: var(--disabled-color);
+}
+.content .parent .add-cate form select option
+{
+    color: black;
 }
 .content .parent .add-cate form input[type='submit']
 {

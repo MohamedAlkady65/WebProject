@@ -65,7 +65,7 @@
 }
 .content .parent .filter
 {
-    height: calc(15% - 10px);
+    height: 50px;
     width: 100%;
     border: 1px solid var(--input-color);
     border-radius: 10px;
@@ -165,7 +165,7 @@
 }
 .content .parent .table .table-head
 {
-    height: 20%;
+    height: 60px;
 }
 .content .parent .table .table-head .row
 {
@@ -190,7 +190,7 @@
     display: flex;
     flex-direction: column;
     overflow: auto;
-    height: 80%;
+    height: calc(100% - 60px);
 }
 
 
@@ -204,7 +204,7 @@
     background-color: #f2f2f2;
     font-size: 15px;
     display: flex;
-    width: calc(100% / 3);
+    width: 100%;
     align-items: center;
     padding-left: 20px;
     height: 50px;
@@ -347,6 +347,15 @@ form.add-pro .up .select-box
     gap: 10px;
     width: 100%;    
 
+    
+}
+form.add-pro .up  .select-box select:invalid
+{
+    color: var(--disabled-color);
+}
+form.add-pro .up  .select-box select option
+{
+    color: black;
 }
 form.add-pro .down
 {
@@ -426,7 +435,7 @@ form.add-pro .down .spec .table {
 }
 form.add-pro .down .spec .table .table-head
 {
-    height: 20%;
+    height: 25px;
 }
 
 form.add-pro .down .spec .table .head-cell {
@@ -447,7 +456,7 @@ form.add-pro .down .spec .table .table-body
     display: flex;
     flex-direction: column;
     overflow: auto;
-    height: 80%;
+    height: calc(100% - 25px);
 }
 
 
