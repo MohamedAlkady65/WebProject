@@ -1,17 +1,17 @@
-const forms=document.querySelectorAll('.form'),
-    links=document.querySelectorAll('.link');
+let inputsBox = document.querySelectorAll(".inp-box");
+let inputs = document.querySelectorAll(".inp-box input");
 
-
-
-links.forEach(link => {
-link.addEventListener("click", e=>{
-e.preventDefault();
-forms[0].classList.toggle("active");
-forms[1].classList.toggle("active");
-
-
-
+inputsBox.forEach((ele)=>{
+    ele.onclick=()=>{
+        ele.querySelector("input").focus();
+    }
 })
 
-
-});    
+inputs.forEach((ele)=>{
+    ele.oninput=()=>{
+        if(ele.value=="")
+            ele.classList.remove("foucs");
+        else
+            ele.classList.add("foucs");
+    }
+})
