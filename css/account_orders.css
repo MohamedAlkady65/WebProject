@@ -1,13 +1,26 @@
+.content {
+    overflow: auto;
+    padding: 20px !important;
+}
 .content .title {
     font-size: 40px;
 }
 
-.content table {
+.content .table-cont{
+    overflow: auto;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
     border: 1px solid var(--input-color);
+
+} 
+
+
+.content table {
     border-spacing: 0;
     width: 100%;
+    min-width: 640px;
     border-radius: 10px;
-    overflow: hidden;
 }
 
 .content table th {
@@ -24,6 +37,9 @@
     font-weight: 400;
     border-bottom: 1px solid var(--input-color);
     height: 65px;
+}
+.content table tbody td.address {
+    font-size: 14px;
 }
 
 .content table tbody td .num {
@@ -50,7 +66,7 @@
     cursor: pointer;
     font-size: 16px;
     display: inline-block;
-
+    width: 100%;
 
 }
 
@@ -69,8 +85,7 @@
     background-color:#d11212;
 }
 
-
-
+/* 
 @media (max-width: 700px) {
     .content table th {
         font-size: 18px;
@@ -87,8 +102,8 @@
         width: 90%;
     
     }
-}
-
+} */
+/* 
 @media (max-width: 550px) {
     .content table th {
         font-size: 15px;
@@ -123,7 +138,7 @@
         transition-duration: 0.3s;
         cursor: pointer;
     }
-}
+} */
 
 .overlay.active {
     position: fixed;

@@ -57,6 +57,7 @@ font-size: 18px;
     display: flex;
     flex-direction: column;
     gap: 30px;
+    align-items: center;
 
 }
 .products-page  .main .products{
@@ -316,6 +317,28 @@ justify-content: center;
     padding: 10px;
 }
 /* End Products */
+
+
+@media (max-width:600px) {
+    .products-page .main .page-num{
+        gap: 10px;
+        width: 270px;
+    }
+    .products-page .main .page-num .nums {
+        gap: 5px;
+    }
+    .products-page .main .page-num .nums span {
+    
+        padding: 4px 10px;
+
+        font-size: 20px;
+    }
+
+    .products-page .main .page-num i{
+        font-size: 25px;
+    }
+    
+}
 
 
 .products-page .parent .filters{

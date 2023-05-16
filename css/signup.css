@@ -146,12 +146,12 @@ color: #2dc235;
 
 }
     
-.inp-box.wrong input{
+.inp-box.null input{
     border-color:#dc3545;
     
 }
-.inp-box.wrong input:focus + .title,
-.inp-box.wrong input.foucs + .title{
+.inp-box.null input:focus + .title,
+.inp-box.null input.foucs + .title{
 color: #dc3545;
 
 }
@@ -160,9 +160,15 @@ color: #dc3545;
 
 .form .pass-box p{
     margin: 10px 0 25px;
+    font-size: 12px;
+    padding: 0 10px;
+    color: var(--hover-color);
 }
 .form .pass-box .inp-box {
     margin: 0;
+}
+.form .pass-box .inp-box.null + p {
+    color: #dc3545;
 }
 
 
@@ -170,36 +176,100 @@ color: #dc3545;
 
 @media (max-width: 600px) {
     .form {
-        width: 300px;
-    }
-
-    .form .log_email label,
-    .form .log_pass label {
-        font-size: 11px;
-    }
-
-    .form .conf_name label {
-        font-size: 11px;
-        padding: 0px;
-
-    }
-
-    .form .conf_name input {
-        width: 130px;
-        font-size: 10px;
-    }
-
-    .form .conf_phn label,
-    .form .conf_pass label,
-    .form .conf_emil label,
-    .form .conf_cpass label {
-        font-size: 11px;
-    }
-
-    .form .conf_phn input {
         width: 100%;
-    }
+        margin: 0 15px;
+        }
+
+}
+
+.email-box p 
+{
+    display: none;
+}
+.email-box.not-valid  .inp-box
+{
+    margin: 0;
+}
+.email-box.not-valid p 
+{
+    margin: 10px 0 25px;
+    font-size: 14px;
+    color: #dc3545;
+    display: block;
+}
+
+.email-box.not-valid  .inp-box input{
+    border-color:#dc3545;
+}
+.email-box.not-valid  .inp-box .title{
+    top: 0;
+transform: translateY(-50%);
+font-size: 16px;
+color: #dc3545;
+}
+
+.phone-box p 
+{
+    display: none;
+}
+.phone-box.not-valid  .inp-box
+{
+    margin: 0;
+}
+.phone-box.not-valid p 
+{
+    margin: 10px 0 25px;
+    font-size: 14px;
+    color: #dc3545;
+    display: block;
+}
+
+.phone-box.not-valid  .inp-box input{
+    border-color:#dc3545;
+}
+.phone-box.not-valid  .inp-box .title{
+    top: 0;
+transform: translateY(-50%);
+font-size: 16px;
+color: #dc3545;
+}
 
 
+.pass-con-box p 
+{
+    display: none;
+}
+.pass-con-box.null  .inp-box
+{
+    margin: 0;
+}
+.pass-con-box.null  p 
+{
+    margin: 10px 0 25px;
+    font-size: 14px;
+    color: #dc3545;
+    display: block;
+}
 
+.pass-con-box.null   .inp-box input{
+    border-color:#dc3545;
+}
+.pass-con-box.null   .inp-box .title{
+    top: 0;
+transform: translateY(-50%);
+font-size: 16px;
+color: #dc3545;
+}
+
+
+.inp-box i 
+{
+    position: absolute;
+    color: var(--disabled-color);
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
 }

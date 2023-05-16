@@ -29,7 +29,10 @@ transform: translateY(-50%);
 font-size: 16px;
 color: var(--default-color);
 
-}
+} 
+
+
+
 
 
 .inp-box .title{
@@ -108,4 +111,53 @@ cursor: pointer;
 form  input[type="submit"]:hover
 {
     background-color: var(--hover-color);
+}
+
+
+.inp-box.null input {
+    border-color: #dc3545 ;
+}
+.inp-box.null .title{
+    color: #dc3545 ;
+}
+
+.inp-box.null .title,
+.inp-box.null input:focus + .title,
+.inp-box.null input.foucs + .title{
+    top: 0;
+    transform: translateY(-50%);
+    font-size: 16px;  
+    color: #dc3545 ;  
+} 
+    
+
+
+.ph-box.not-valid input {
+    border-color: #dc3545 ;
+}
+.ph-box.not-valid .title{
+    color: #dc3545 ;
+}
+
+.ph-box.not-valid .title,
+.ph-box.not-valid input:focus + .title,
+.ph-box.not-valid input.foucs + .title{
+    top: 0;
+    transform: translateY(-50%);
+    font-size: 16px;  
+    color: #dc3545 ;  
+} 
+    
+    
+.ph-box p{
+    margin: 10px 0 0 5px;
+    display: none;
+    color: #dc3545 ;
+    font-size: 14px;
+
+}
+    
+.ph-box.not-valid p{
+    display: block;
+
 }

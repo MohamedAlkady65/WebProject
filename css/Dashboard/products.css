@@ -14,41 +14,6 @@
    height: 100vh;
 }
 
-.content .tabs 
-{
-    display: flex;
-    background-color: #f1f5f9;
-    height: 70px;
-}
-
-.content .tabs li a
-{
-    display: inline-block;
-    font-size: 25px;
-    font-weight: bold;
-    cursor: pointer;
-    transition-duration: 0.3s;
-    padding: 20px;
-}
-.content .tabs li:hover a
-{
-        color: var(--default-color);
-
-}
-.content .tabs li.active a
-{
-    background-color:white;
-    color: var(--hover-color);
-
-}
-.content .tabs li a
-{
-    color: black;
-    width: 100%;
-    height: 100%;
-
-}
-
 .content .parent
 {
     background-color: white;

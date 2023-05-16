@@ -6,13 +6,13 @@
     --input-color:#E8E8E8;
   }
 .page {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
 }
 /* Start SideBar */
 .sidebar
 {
-    width: 300px;
+    width: 200px;
     box-shadow: 0 0 10px #ddd;
     z-index: 10;
     background-color: var(--default-color);
@@ -28,6 +28,10 @@
     font-size: 32px;
     margin: 50px 0;
 }
+.sidebar ul
+{
+    margin: 50px 0;
+}
 .sidebar ul li 
 {
     margin-bottom: 30px;
@@ -36,10 +40,10 @@
 {
     margin-bottom: 5px;
     transition-duration: 0.3s;
-    font-size: 20px;
+    font-size: 18px;
     border-radius: 5px;
     color: white;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     display: flex;
 }
@@ -58,7 +62,7 @@
         display: none;
     }
 }
-.page .content{
+.page  .content{
     flex-grow: 1;
 }
 /* End SideBar */

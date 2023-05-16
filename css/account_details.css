@@ -51,9 +51,38 @@ margin-bottom: 30px;
 }
 
 
-.section .main .content.details .one  form.info .inp-box{
+.section .main .content.details .one  form.info .up > div{
     width: calc(93% / 3);
 } 
+
+
+
+
+.section .main .content.details .one  form.info.edit-now .inp-box.null input{
+    border-color: #dc3545 ;
+}
+.section .main .content.details .one  form.info.edit-now .inp-box.null span{
+    color: #dc3545 ;
+}
+
+
+.section .main .content.details .one  form.info.edit-now .ph-box.not-valid .inp-box input{
+    border-color: #dc3545 ;
+}
+.section .main .content.details .one  form.info.edit-now .ph-box.not-valid .inp-box span{
+    color: #dc3545 ;
+}
+
+.section .main .content.details .one  form.info  .ph-box  p{
+    margin: 10px 0 0 5px;
+    display: none;
+    color: #dc3545 ;
+    font-size: 12px;
+}
+.section .main .content.details .one  form.info.edit-now  .ph-box.not-valid p{
+    display: block;
+}
+
 
 
 
@@ -148,7 +177,7 @@ cursor: pointer;
     justify-content: space-between;
     align-items: center;
 }
-.section .main .content.details  .one .part form.email .up >div
+.section .main .content.details  .one .part form.email .up >.btns
 {
     display: flex;
 
@@ -157,6 +186,27 @@ cursor: pointer;
 {
     min-width: 400px;
 }
+
+
+.section .main .content.details  .one .part form.email.edit-now  .not-valid input,
+.section .main .content.details  .one .part form.email.edit-now  .null input{
+    border-color: #dc3545 ;
+}
+.section .main .content.details  .one .part form.email.edit-now  .not-valid span,
+.section .main .content.details  .one .part form.email.edit-now  .null span{
+    color: #dc3545 ;
+}
+
+.section .main .content.details  .one .part form.email  p{
+    margin: 10px 0 0 5px;
+    display: none;
+    color: #dc3545 ;
+    font-size: 14px;
+}
+.section .main .content.details  .one .part form.email.edit-now  .not-valid p{
+    display: block;
+}
+
 
 
 .section .main .content.details  .one .part form.pass .up{
@@ -176,11 +226,54 @@ flex-direction: column;
 gap: 40px;
 }
 .section .main .content.details  .one .part form.pass .up .left .inp-box{
-
+    height: 60px;
     width: 90%;
 }
 .section .main .content.details  .one .part form.pass .up .left .inp-box input{
-
-    padding: 10px 0 10px 15px;
+    height: 100%;
+    padding: 10px 40px 10px 15px;
     font-size: 30px;
+}
+.section .main .content.details  .one .part form.pass .up .left  p{
+    margin: 10px 0 0 5px;
+    display: none;
+    color: #dc3545 ;
+    font-size: 14px;
+
+}
+.section .main .content.details  .one .part form.pass .up .left .new-pass  p{
+    font-size: 13px;
+    display: block;
+    color: var(--hover-color);
+}
+.section .main .content.details  .one .part form.pass .up .left .new-pass .inp-box.null + p{
+    color: #dc3545;
+}
+.section .main .content.details  .one .part form.pass .up .left .not-valid input,
+.section .main .content.details  .one .part form.pass .up .left .null input{
+    border-color: #dc3545 ;
+}
+.section .main .content.details  .one .part form.pass .up .left .not-valid span,
+.section .main .content.details  .one .part form.pass .up .left .null span{
+    color: #dc3545 ;
+}
+.section .main .content.details  .one .part form.pass .up .left .not-valid  p{
+    margin: 10px 0 0 5px;
+    display: block;
+}
+
+.section .main .content.details  .one .part form.pass .up .left .inp-box input +i 
+{
+    position: absolute;
+    color: var(--disabled-color);
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+}
+.section .main .content.details  .one .part form.pass .up .left .inp-box input[type='text'] 
+{
+    font-size: 14px;
 }

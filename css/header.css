@@ -5,6 +5,7 @@
     background-color: white;
     z-index: 100;
     border-bottom: 1px solid var(--input-color) ;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
 }
 .header .container {
     background-color: white;
@@ -35,14 +36,20 @@
 
 .header .srch-box {
     display: flex;
+    justify-content: space-between;
     overflow: hidden;
     height: 100%;
+}
+
+.header .srch-box .srch-cont {
+    display: flex;
+    width: 300px;
 }
 
 .header .srch-text {
     position: relative;
     height: 100%;
-    width: 300px;
+    flex-basis: 1;
 }
 
 .header .srch-text input {
@@ -100,10 +107,10 @@
     background-color: var(--default-color);
     border-radius: 5px;
     position: relative;
-    margin-right: 20px;
     display: none;
     transition-duration: 0.2s;
     cursor: pointer;
+    order: 3;
 }
 
 .header .menu-btn:hover {
@@ -156,14 +163,13 @@
     position: absolute;
     font-size: 8px;
     color: white;
-    background-color: red;
+    background-color: #dc3545;
     border-radius: 50%;
-    width: 12px;
-    height: 12px;
     text-align: center;
     line-height: 12px;
-    top: 4px;
-    right: 4px;
+    top: 2px;
+    padding: 2px 3px;
+    right: 2px;
 }
 
 .header .nav-links {
@@ -180,6 +186,11 @@
 
 .header .nav-links li a {
     color: black;
+    padding: 10px;
+    transition-duration: 0.3s;
+}
+.header .nav-links li a:hover {
+    color: var(--hover-color);
 }
 
 .header .cat-link {
@@ -206,16 +217,17 @@
     position: absolute;
     top: 29px;
     left: -5px;
-    background-color: white;
+    background-color: #f6f6f6;
     width: 150px;
     font-size: 13px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .header .cat-list li a {
     display: inline-block;
     width: 100%;
     padding: 10px 10px;
-    border-bottom: 2px solid var(--default-color);
     transition-duration: 0.3s;
 }
 
@@ -255,14 +267,17 @@
         display: inline-block;
     }
 
+
     .header .down {
-        position: absolute;
-        width: 50%;
-        top: 120px;
-        height: calc(100vh - 120px);
+        position: fixed;
+        width: 200px;
+        top: 0;
+        height: 100vh;
         left: -700px;
         background-color: rgb(244, 244, 244);
         transition-duration: 0.3s;
+        z-index: 600;
+        padding: 10px;
     }
 
     .header .down.active {
@@ -314,19 +329,9 @@
     }
 
     .header .cat-list li {
-        border-bottom: 1px solid var(--default-color);
         padding-left: 10px;
     }
 
-    .header .cat-list li a::before {
-        font-family: "Font Awesome 6 Free";
-        font-weight: 900;
-        content: "\f0da";
-        position: absolute;
-        left: 5px;
-        color: var(--default-color);
-        font-size: 16px;
-    }
 }
 @media (max-width: 400px) {
 
@@ -341,5 +346,16 @@
         height: 85%;
     }
 
+}
+
+.over-header.active{
+    position: fixed;
+    opacity: 0.7;
+    background-color: black;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 500;
 }
 /* End Header */

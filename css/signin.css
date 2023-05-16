@@ -107,42 +107,68 @@ user-select: none;
 cursor:text;
 }
 
+.inp-box.null input{
+    border-color:#dc3545;
+    
+}
+
+.inp-box.null input:focus + .title,
+.inp-box.null input.foucs + .title{
+color: #dc3545;
+
+}
 
 
 
 
 @media (max-width: 600px) {
     .form {
-        width: 300px;
-    }
-
-    .form .log_email label,
-    .form .log_pass label {
-        font-size: 11px;
-    }
-
-    .form .conf_name label {
-        font-size: 11px;
-        padding: 0px;
-
-    }
-
-    .form .conf_name input {
-        width: 130px;
-        font-size: 10px;
-    }
-
-    .form .conf_phn label,
-    .form .conf_pass label,
-    .form .conf_emil label,
-    .form .conf_cpass label {
-        font-size: 11px;
-    }
-
-    .form .conf_phn input {
         width: 100%;
-    }
+        margin: 0 15px;
+        }
 
+}
 
+.failed
+{
+    display: none;
+}
+.failed.active
+{
+ width: 60%;
+ margin:0 auto;
+ padding: 10px 10px ;
+ background-color: #ffeaea;
+ border: 2px solid #dc3545 ;
+ color: #dc3545;
+ margin: 10px auto 15px;
+ font-weight: 600;
+ border-radius: 3px;
+ text-align: center;
+ display: block;
+ 
+}
+.failed p{
+    margin: 0;
+}
 
+.rem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+
+}
+
+.inp-box i 
+{
+    position: absolute;
+    color: var(--disabled-color);
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
 }
