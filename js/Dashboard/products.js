@@ -25,7 +25,7 @@ document.addEventListener("click",(e)=>{
 })
 
 popUpDeletePro.querySelector(".ok-btn-pop").onclick=  ()=>{
-    fetch("../../php/dash_board/delete_product.php", {
+    fetch("../../php/dash_board/products/delete_product.php", {
         method: "POST",
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: `pro_id=${popUpDeletePro.dataset.proid}`
@@ -88,7 +88,7 @@ function loadPage() {
 
 function loadTable() {
     tableBody.innerHTML = "";
-    fetch("../../php/dash_board/getproducts.php", {
+    fetch("../../php/dash_board/products/getproducts.php", {
         method: "POST",
         async: false,
     })
@@ -121,7 +121,7 @@ function loadTable() {
 }
 
 function loadFilterCates() {
-    fetch("../../php/cates_subcates.php", {
+    fetch("../../php/home/cates_subcates.php", {
         method: "POST",
         async: false,
     })
@@ -139,7 +139,7 @@ function loadFilterCates() {
 }
 
 function loadFilterSubCates() {
-    fetch(`../../php/dash_board/subcates_filter.php`, {
+    fetch(`../../php/dash_board/sub_cates/subcates_filter.php`, {
         method: "GET",
         async: false,
     })
@@ -198,7 +198,7 @@ function fillTable(catid, subcatid) {
 
 function refreshTable()
 {
-    fetch("../../php/dash_board/getproducts.php", {
+    fetch("../../php/dash_board/products/getproducts.php", {
         method: "POST",
         async: false,
     })
@@ -218,7 +218,7 @@ function refreshTable()
 
 function FillBySearch(pro_name) {
     tableBody.innerHTML = "";
-    fetch(`../../php/dash_board/search_products.php?pro_name=${pro_name}`, {
+    fetch(`../../php/dash_board/products/search_products.php?pro_name=${pro_name}`, {
         method: "GET",
         async: false,
     })
@@ -262,7 +262,7 @@ let dataSubcatesAdd=[];
 
 
 function loadAddFilterCates() {
-    fetch("../../php/cates_subcates.php", {
+    fetch("../../php/home/cates_subcates.php", {
         method: "POST",
         async: false,
     })
@@ -280,7 +280,7 @@ function loadAddFilterCates() {
 }
 
 function loadAddFilterSubCates(cat_id) {
-    fetch(`../../php/dash_board/subcates_filter.php`, {
+    fetch(`../../php/dash_board/sub_cates/subcates_filter.php`, {
         method: "GET",
         async: false,
     })
@@ -338,8 +338,8 @@ uploadImgs.oninput = () => {
 let feaNameInput = document.getElementById("fea-name-input");
 let feaValueInput = document.getElementById("fea-value-input");
 let previewFea = document.getElementById("preview-fea");
-
-document.getElementById("add-fea").onclick = () => {
+let addFeaBtn =document.getElementById("add-fea");
+addFeaBtn.onclick = () => {
     previewFea.innerHTML += `
     <div class="row">
     <div class="body-cell fea-name">${feaNameInput.value}</div>
@@ -359,13 +359,14 @@ let proNameInput = addProForm.querySelector("input[name='name']");
 let proPriceInput = addProForm.querySelector("input[name='price']");
 let proStockInput = addProForm.querySelector("input[name='stock']");
 
+let descArea =document.getElementById("descarea");
 
 
 addProForm.onsubmit = (e) => {
     refreshFeaturesValue();
     e.preventDefault();
 
-    if (proNameInput.value==""||proPriceInput.value==""||proStockInput.value==""||addFilterSubCate.value==""||uploadImgs.files.length==0) {
+    if (proNameInput.value==""||proPriceInput.value==""||proStockInput.value==""||addFilterSubCate.value==""||uploadImgs.files.length==0||isNaN(Number(proStockInput.value))||isNaN(Number(proPriceInput.value)) ){
         let message="";
 
         if(proNameInput.value=="")
@@ -378,6 +379,10 @@ addProForm.onsubmit = (e) => {
         message="Please Select Sub Category";
         else if(uploadImgs.files.length==0)
         message="Please Upload At Least One Image";
+        else if(isNaN(Number(proPriceInput.value)))
+        message="Please Enter Valid Product Price";
+        else if(isNaN(Number(proStockInput.value)))
+        message="Please Enter Valid Product Stock";
 
 
         popUpAlertCate.classList.add("active");
@@ -387,7 +392,7 @@ addProForm.onsubmit = (e) => {
 
     }
 
-    fetch("../../php/dash_board/add_product.php", {
+    fetch("../../php/dash_board/products/add_product.php", {
         method: "POST",
         body: new FormData(addProForm),
     })
@@ -395,6 +400,8 @@ addProForm.onsubmit = (e) => {
         .then((data) => {
             console.log(data);
             refreshTable();
+            proNameInput.value=proPriceInput.value=proStockInput.value = descarea.value =addFilterSubCate.value= previewFea.innerHTML =  uploadImgs.value =  previewImgs.innerHTML ="";
+
         })
         .catch((error) => {
             console.error(error);
@@ -431,5 +438,4 @@ function refreshFeaturesValue() {
     });
 
     feaValues.value = JSON.stringify(result);
-    // console.log(feaValues.value);
 }

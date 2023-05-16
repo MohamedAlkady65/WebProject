@@ -6,7 +6,7 @@ let selectCate = document.getElementById("select-cate");
 
 function refreshPage() {
     let tableData = document.querySelector(".content .parent .table .table-body");
-    fetch("../../php/cates_subcates.php", {
+    fetch("../../php/home/cates_subcates.php", {
         method: "POST", async: false
     }).then(response => response.json()).then(cates => {
 
@@ -16,7 +16,7 @@ function refreshPage() {
             selectCate.innerHTML += `<option value="${cat['cat_id']}">${cat['cat_name']}</option>`
         })
 
-        fetch("../../php/subcates.php", {
+        fetch("../../php/home/subcates.php", {
             method: "POST", async: false
         }).then(response => response.json()).then(subCates => {
 
@@ -151,7 +151,7 @@ let overlay = document.querySelector(".overlay");
 
 
 popUpEditCate.querySelector(".ok-btn").onclick = () => {
-    fetch("../../php/dash_board/edit_subcate.php", {
+    fetch("../../php/dash_board/sub_cates/edit_subcate.php", {
         method: "POST",
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: `subcate_id=${popUpEditCate.dataset.subcateid}&newname=${popUpEditCate.dataset.subcatename}&cate_id=${popUpEditCate.dataset.cateid}`
@@ -174,7 +174,7 @@ popUpEditCate.querySelector(".ok-btn").onclick = () => {
 popUpDeleteCate.querySelector(".ok-btn").onclick = () => {
 
 
-    fetch("../../php/dash_board/delete_subcate.php", {
+    fetch("../../php/dash_board/sub_cates/delete_subcate.php", {
         method: "POST",
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: `subcate_id=${popUpDeleteCate.dataset.subcateid}`
@@ -244,7 +244,7 @@ addCateForm.querySelector("input[type='submit']").onclick=()=>{
 
     }
 
-    fetch('../../php/dash_board/add_subcate.php', {
+    fetch('../../php/dash_board/sub_cates/add_subcate.php', {
         method: 'POST',
         body: new FormData(addCateForm)
     })

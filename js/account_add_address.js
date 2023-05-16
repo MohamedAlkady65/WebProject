@@ -1,6 +1,7 @@
 let inputBox =document.querySelectorAll(".inp-box input[type='text']")
 let titleSpan =document.querySelectorAll(".inp-box")
 let countrySelect = document.getElementById("country-select");
+let form = document.querySelector("form");
 
 
 inputBox.forEach((ele)=>{
@@ -24,3 +25,64 @@ countrySelect.innerHTML="";
 arr.forEach((ele)=>{
     countrySelect.innerHTML+=`<option ${ele=="Egypt"?"selected":""} value="${ele}">${ele}</option>`;
 })
+let numReg = /^[0-9]{5,20}$/;
+
+form.onsubmit=()=>{
+
+    let valid =true;
+
+    inputBox.forEach((ele,ind)=>{
+        if(ind!=4)
+        {
+            if(ele.value=="")
+            {
+                ele.parentElement.classList.add("null");
+                valid=false;
+            }
+            else{
+                ele.parentElement.classList.remove("null");
+            }
+        }
+    })
+
+    if(!valid)
+    {
+        return false;
+    }
+
+    if(!numReg.test(inputBox[3].value))
+    {
+        inputBox[3].parentElement.parentElement.classList.add("not-valid");
+        return false;
+    }
+    else{
+        inputBox[3].parentElement.parentElement.classList.remove("not-valid");
+    }
+
+    
+    fetch('../php/acoount/account_add_address.php', {
+        method: 'POST',
+        body: new FormData(form)
+    })
+        .then(response => response.text())
+        .then(data => {
+
+            if(data.trim() == 'ok')
+            {
+
+                window.location.href="account_my_address.html";
+
+            }
+
+            return false;
+
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
+        
+    
+    return false;
+
+}

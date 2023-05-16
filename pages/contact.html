@@ -5,25 +5,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../js/check_session.js"></script>
     <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="stylesheet" href="../css/all.min.css" />
     <link rel="stylesheet" href="../css/master.css" />
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="icon" href="../images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
-    <title>Contact - Ecommerce</title>
+    <title>Contact Us - Online Store</title>
 </head>
 
 <body>
 
 
 
+
+
     <nav class="header">
+
+        <div class=" over-header"></div>
 
         <div class="container">
 
@@ -31,39 +37,41 @@
 
                 <div class="logo">
                     <img src="../images/logo.png" alt="">
-                    E Commerce
+                    Online Store
                 </div>
 
                 <div class="srch-box">
 
                     <div class="menu-btn fa-solid fa-bars"></div>
 
-                    <div class="srch-text">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" placeholder="Search">
+                    <div class="srch-cont">
+                        <div class="srch-text">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Search">
+                        </div>
+    
+                        <div class="srch-btn fa-solid fa-magnifying-glass">
+                            <input type="button">
+                        </div>
                     </div>
 
-                    <div class="srch-btn fa-solid fa-magnifying-glass">
-                        <input type="button">
-                    </div>
 
 
                 </div>
 
 
                 <div class="btns">
-                    <a href="#" class="fav-btn fa fa-regular fa-heart"></a>
                     <a href="cart.html" class="cart-btn fa-solid fa-cart-shopping">
                         <span class="count">1</span>
                     </a>
-                    <a href="sign.html" class="account-btn fa-regular fa-user"></a>
+                    <a href="account_details.html" class="account-btn fa-regular fa-user"></a>
                 </div>
 
             </div>
 
             <div class="down">
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home.html">Home</a></li>
                     <li class="cat-link ">
                         <span class="cat-link-text">Category</span>
                         <ul class="cat-list">
@@ -81,12 +89,14 @@
         </div>
     </nav>
 
+
+
     <div class="contact">
         <div class="container">
             <div class="parent">
                 <h2 class="title">CONTACT US</h2>
-                <form action="">
-                    <textarea name=""  placeholder="Enter Your Message Here ..."></textarea>
+                <form action="home.html">
+                    <textarea name="" placeholder="Enter Your Message Here ..."></textarea>
                     <input type="submit" value="Send">
                 </form>
             </div>
@@ -97,14 +107,12 @@
 
 
 
-
-
     <footer>
         <div class="content">
             <div class="subContent">
                 <div class="logo">
                     <img src="../images/logo.png" alt="">
-                    E Commerce
+                    <span>Online Store</span>
                 </div>
                 <div class="shop">
                     <h2>Social Media</h2>
@@ -152,7 +160,10 @@
 
         </div>
     </footer>
-
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+    <script src="../js/loader.js"></script>
 
     <script src="../js/header.js"></script>
     <script src="../js/contact.js"></script>

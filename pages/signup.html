@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="../css/all.min.css" />
     <link rel="stylesheet" href="../css/master.css" />
     <link rel="stylesheet" href="../css/signup.css" />
+    <link rel="icon" href="../images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
-    <title>sign</title>
+        <title>Sign Up - Online Store</title>
 </head>
 
 <body>
@@ -30,42 +31,53 @@
                 <form>
                     <div class="name-inputs">
                         <div class="inp-box">
-                            <input type="text" name="name" class="name">
+                            <input type="text" name="Fname" class="name">
                             <span class="title">First Name</span>      
 
                         </div>
                         <div class="inp-box">
-                            <input type="text" name="surname" class="name" >    
+                            <input type="text" name="Lname" class="name" >    
                             <span class="title">Last Name</span>      
                         </div>
                     </div>
 
-                    <div class="inp-box">
-                        <input type="text" name="email" class="phone">
-                        <span class="title">Email</span>      
+                    <div class="email-box">
+                        <div class="inp-box">
+                            <input type="text" name="email" class="phone">
+                            <span class="title">Email</span>      
+                        </div>
+                        <p>This Email Is Already Used</p>
+    
+                    </div>
+   
+                    <div class="phone-box">
+                        <div class="inp-box">
+                            <input type="text" name="phone" >
+                            <span class="title">Phone</span>      
+                        </div>
+                        <p>Please Enter Valid Phone Number</p>
                     </div>
 
-
-                    <div class="inp-box">
-                        <input type="email" name="phone" >
-                        <span class="title">Phone</span>      
-                    </div>
 
                     <div class="pass-box">
                         <div class="inp-box">
                             <input type="password" name="pass" >
-                            <span class="title">Password</span>      
+                            <span class="title">Password</span> 
+                            <i class="fa-solid fa-eye-slash"></i>     
                         </div>
-                        <p>Password must be 8-20 characters</p>
+                        <p>Password must be 8-20 characters, and include at least one lowercase letter, one uppercase letter, one number, one special character.</p>
 
                     </div>
 
-
+                    <div class="pass-con-box">
                     <div class="inp-box">
-                        <input type="password" name="cpass" >
-                        <span class="title">Confirm Password</span>      
-
+                        <input type="password" name="conPass" >
+                        <span class="title">Confirm Password</span>  
+                        <i class="fa-solid fa-eye-slash"></i>    
                     </div>
+                    <p>Passwords Must Match</p>
+                </div>
+
 
                     <div class="have-already">
                         <span>Have Already an acount?</span>
@@ -96,8 +108,13 @@
 
     </div>
 
-
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+    <script src="../js/loader.js"></script>
+    
     <script src="../js/sign.js"></script>
+    <script src="../js/signup.js"></script>
 </body>
 
 </html>

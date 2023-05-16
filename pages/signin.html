@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="../css/all.min.css" />
     <link rel="stylesheet" href="../css/master.css" />
     <link rel="stylesheet" href="../css/signin.css" />
+    <link rel="icon" href="../images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
-    <title>sign</title>
-</head>
+        <title>Sign In - Online Store</title>
+    </head>
 
 <body>
   
@@ -30,25 +31,34 @@
 
             <div class="signin">
 
-                <form>
+                <form action="" method="post">
 
-                    <div class="inp-box correct">
-                        <input type="email" name="email" >
+                    <div class="inp-box ">
+                        <input type="text" name="email" >
                         <span class="title">Email</span>
                     </div>
 
 
-                    <div class="inp-box">
+                    <div class="inp-box pass-inp">
                         <input type="password" name="pass" >
                         <span class="title">Password</span>
+                        <i class="fa-solid fa-eye-slash"></i>     
+
                     </div>
 
+                    <div class="rem">
+                        <input type="checkbox" name="rem" value="yes">
+                        <label for="">Remember Me</label>
+                    </div>
 
                     <div class="submit-box">
                         <input type="submit" value="SIGN IN" class="submit">
                     </div>
 
-                    <!-- <hr> -->
+                    <div class="failed">
+                        <p>Invaild Email Or Password</p>
+                    </div>
+
 
 
                     <div class="acount" style="text-align: center;">
@@ -67,7 +77,12 @@
 
     </div>
 
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+    <script src="../js/loader.js"></script>
     <script src="../js/sign.js"></script>
+    <script src="../js/signin.js"></script>
 </body>
 
 </html>

@@ -1,8 +1,9 @@
 
+
 let tableData = document.querySelector(".content .parent .table .table-body");
 function refreshPage() {
 
-    fetch("../../php/cates_subcates.php", {
+    fetch("../../php/home/cates_subcates.php", {
         method: "POST", async: false
     }).then(response => response.json()).then(data => {
 
@@ -101,7 +102,7 @@ document.addEventListener("click", (e) => {
 
 popUpEditCate.querySelector(".ok-btn-pop").onclick = () => {
 
-    fetch("../../php/dash_board/edit_cate.php", {
+    fetch("../../php/dash_board/cates/edit_cate.php", {
         method: "POST",
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: `cate_id=${popUpEditCate.dataset.cateid}&cate_name=${popUpEditCate.dataset.catename}`
@@ -110,6 +111,8 @@ popUpEditCate.querySelector(".ok-btn-pop").onclick = () => {
         .then(response => response.text())
         .then(data => {
             console.log(data);
+            if(data=="ok")
+            console.log(55);
         })
         .catch(error => {
             console.log(error);
@@ -124,7 +127,7 @@ popUpEditCate.querySelector(".ok-btn-pop").onclick = () => {
 
 popUpDeleteCate.querySelector(".ok-btn-pop").onclick = () => {
 
-    fetch("../../php/dash_board/delete_cate.php", {
+    fetch("../../php/dash_board/cates/delete_cate.php", {
         method: "POST",
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: `cate_id=${popUpDeleteCate.dataset.cateid}`
@@ -182,7 +185,7 @@ addCateForm.onsubmit = (e) => {
 
     }
 
-    fetch('../../php/dash_board/add_cate.php', {
+    fetch('../../php/dash_board/cates/add_cate.php', {
         method: 'POST',
         body: new FormData(addCateForm)
     })

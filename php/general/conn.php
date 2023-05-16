@@ -8,3 +8,15 @@ $password = "";
 $dbname = "ecomdb"; 
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+}
+
+if(isset($_COOKIE['userid']))
+{
+    $_SESSION['userid']=$_COOKIE['userid'];
+
+}
